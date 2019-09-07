@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQuery lightGallery demo</title>
+        <link href="../dist/css/lightgallery.css" rel="stylesheet">
+        <style type="text/css">
+            body{
+                background-color: #152836
+            }
+            .demo-gallery > ul {
+              margin-bottom: 0;
+            }
+            .demo-gallery > ul > li {
+                float: left;
+                margin-bottom: 15px;
+                margin-right: 20px;
+                width: 200px;
+            }
+            .demo-gallery > ul > li a {
+              border: 3px solid #FFF;
+              border-radius: 3px;
+              display: block;
+              overflow: hidden;
+              position: relative;
+              float: left;
+            }
+            .demo-gallery > ul > li a > img {
+              -webkit-transition: -webkit-transform 0.15s ease 0s;
+              -moz-transition: -moz-transform 0.15s ease 0s;
+              -o-transition: -o-transform 0.15s ease 0s;
+              transition: transform 0.15s ease 0s;
+              -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+              height: 100%;
+              width: 100%;
+            }
+            .demo-gallery > ul > li a:hover > img {
+              -webkit-transform: scale3d(1.1, 1.1, 1.1);
+              transform: scale3d(1.1, 1.1, 1.1);
+            }
+            .demo-gallery > ul > li a:hover .demo-gallery-poster > img {
+              opacity: 1;
+            }
+            .demo-gallery > ul > li a .demo-gallery-poster {
+              background-color: rgba(0, 0, 0, 0.1);
+              bottom: 0;
+              left: 0;
+              position: absolute;
+              right: 0;
+              top: 0;
+              -webkit-transition: background-color 0.15s ease 0s;
+              -o-transition: background-color 0.15s ease 0s;
+              transition: background-color 0.15s ease 0s;
+            }
+            .demo-gallery > ul > li a .demo-gallery-poster > img {
+              left: 50%;
+              margin-left: -10px;
+              margin-top: -10px;
+              opacity: 0;
+              position: absolute;
+              top: 50%;
+              -webkit-transition: opacity 0.3s ease 0s;
+              -o-transition: opacity 0.3s ease 0s;
+              transition: opacity 0.3s ease 0s;
+            }
+            .demo-gallery > ul > li a:hover .demo-gallery-poster {
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+            .demo-gallery .justified-gallery > a > img {
+              -webkit-transition: -webkit-transform 0.15s ease 0s;
+              -moz-transition: -moz-transform 0.15s ease 0s;
+              -o-transition: -o-transform 0.15s ease 0s;
+              transition: transform 0.15s ease 0s;
+              -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+              height: 100%;
+              width: 100%;
+            }
+            .demo-gallery .justified-gallery > a:hover > img {
+              -webkit-transform: scale3d(1.1, 1.1, 1.1);
+              transform: scale3d(1.1, 1.1, 1.1);
+            }
+            .demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
+              opacity: 1;
+            }
+            .demo-gallery .justified-gallery > a .demo-gallery-poster {
+              background-color: rgba(0, 0, 0, 0.1);
+              bottom: 0;
+              left: 0;
+              position: absolute;
+              right: 0;
+              top: 0;
+              -webkit-transition: background-color 0.15s ease 0s;
+              -o-transition: background-color 0.15s ease 0s;
+              transition: background-color 0.15s ease 0s;
+            }
+            .demo-gallery .justified-gallery > a .demo-gallery-poster > img {
+              left: 50%;
+              margin-left: -10px;
+              margin-top: -10px;
+              opacity: 0;
+              position: absolute;
+              top: 50%;
+              -webkit-transition: opacity 0.3s ease 0s;
+              -o-transition: opacity 0.3s ease 0s;
+              transition: opacity 0.3s ease 0s;
+            }
+            .demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+            .demo-gallery .video .demo-gallery-poster img {
+              height: 48px;
+              margin-left: -24px;
+              margin-top: -24px;
+              opacity: 0.8;
+              width: 48px;
+            }
+            .demo-gallery.dark > ul > li a {
+              border: 3px solid #04070a;
+            }
+            .home .demo-gallery {
+              padding-bottom: 80px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </head>
+    <body class="home">
+
+        <div class="demo-gallery">
+            <ul id="lightgallery" class="list-unstyled row">
+
+
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/001.JPG 375, thumbs/001.JPG 480, thumbs/001.JPG 800" data-src="img/001.JPG" data-sub-html="<h4>2017:08:27 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/001.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/002.JPG 375, thumbs/002.JPG 480, thumbs/002.JPG 800" data-src="img/002.JPG" data-sub-html="<h4>2017:08:01 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/002.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/003.JPG 375, thumbs/003.JPG 480, thumbs/003.JPG 800" data-src="img/003.JPG" data-sub-html="<h4>2017:08:01 </h4><p>Aqua park prima sort</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/003.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/004.JPG 375, thumbs/004.JPG 480, thumbs/004.JPG 800" data-src="img/004.JPG" data-sub-html="<h4>2017:08:01 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/004.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/005.JPG 375, thumbs/005.JPG 480, thumbs/005.JPG 800" data-src="img/005.JPG" data-sub-html="<h4>2017:08:01 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/005.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/006.JPG 375, thumbs/006.JPG 480, thumbs/006.JPG 800" data-src="img/006.JPG" data-sub-html="<h4>2017:08:01 </h4><p>Wlazłaś do basenu i ok, ale zjeżdżalnia jest moja</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/006.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/007.JPG 375, thumbs/007.JPG 480, thumbs/007.JPG 800" data-src="img/007.JPG" data-sub-html="<h4>2017:08:01 </h4><p>Wakacje pod gruszą</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/007.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/008.JPG 375, thumbs/008.JPG 480, thumbs/008.JPG 800" data-src="img/008.JPG" data-sub-html="<h4>2017:08:01 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/008.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/009.JPG 375, thumbs/009.JPG 480, thumbs/009.JPG 800" data-src="img/009.JPG" data-sub-html="<h4>2017:08:01 </h4><p>Coś tu pęknie, ja albo pielucha </p>">
+				<a href=""> <img class="img-responsive" src="thumbs/009.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/010.JPG 375, thumbs/010.JPG 480, thumbs/010.JPG 800" data-src="img/010.JPG" data-sub-html="<h4>2017:08:04 </h4><p>2 baby do 1 roweru. Dobrze że ma 2 końce</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/010.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/011.JPG 375, thumbs/011.JPG 480, thumbs/011.JPG 800" data-src="img/011.JPG" data-sub-html="<h4>2017:08:04 </h4><p>Naprawdę?</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/011.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/012.JPG 375, thumbs/012.JPG 480, thumbs/012.JPG 800" data-src="img/012.JPG" data-sub-html="<h4>2017:08:04 </h4><p>No co ty powiesz</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/012.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/013.JPG 375, thumbs/013.JPG 480, thumbs/013.JPG 800" data-src="img/013.JPG" data-sub-html="<h4>2017:08:04 </h4><p>Ja nie umiem prowadzić samochodu?</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/013.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/014.JPG 375, thumbs/014.JPG 480, thumbs/014.JPG 800" data-src="img/014.JPG" data-sub-html="<h4>2017:08:04 </h4><p>Rower też umiem</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/014.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/015.JPG 375, thumbs/015.JPG 480, thumbs/015.JPG 800" data-src="img/015.JPG" data-sub-html="<h4>2017:08:04 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/015.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/016.JPG 375, thumbs/016.JPG 480, thumbs/016.JPG 800" data-src="img/016.JPG" data-sub-html="<h4>2017:08:04 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/016.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/017.JPG 375, thumbs/017.JPG 480, thumbs/017.JPG 800" data-src="img/017.JPG" data-sub-html="<h4>2017:08:04 </h4><p>Samochód z napędem na gumę</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/017.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/018.JPG 375, thumbs/018.JPG 480, thumbs/018.JPG 800" data-src="img/018.JPG" data-sub-html="<h4>2017:08:04 </h4><p>Ale klakson ma</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/018.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/019.JPG 375, thumbs/019.JPG 480, thumbs/019.JPG 800" data-src="img/019.JPG" data-sub-html="<h4>2017:08:04 </h4><p>Samochód z napędem na 2 nogi</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/019.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/020.JPG 375, thumbs/020.JPG 480, thumbs/020.JPG 800" data-src="img/020.JPG" data-sub-html="<h4>2017:08:04 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/020.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/021.JPG 375, thumbs/021.JPG 480, thumbs/021.JPG 800" data-src="img/021.JPG" data-sub-html="<h4>2017:08:05 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/021.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/022.JPG 375, thumbs/022.JPG 480, thumbs/022.JPG 800" data-src="img/022.JPG" data-sub-html="<h4>2017:08:05 </h4><p>Arbuzowe potworki</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/022.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/023.JPG 375, thumbs/023.JPG 480, thumbs/023.JPG 800" data-src="img/023.JPG" data-sub-html="<h4>2017:08:10 </h4><p>Ja też chcę na fotel</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/023.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/024.JPG 375, thumbs/024.JPG 480, thumbs/024.JPG 800" data-src="img/024.JPG" data-sub-html="<h4>2017:08:10 </h4><p>Tatko, trzymam rękę na pulsie</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/024.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/025.JPG 375, thumbs/025.JPG 480, thumbs/025.JPG 800" data-src="img/025.JPG" data-sub-html="<h4>2017:08:12 </h4><p>Ciekawe jakie skarby kryje</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/025.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/026.JPG 375, thumbs/026.JPG 480, thumbs/026.JPG 800" data-src="img/026.JPG" data-sub-html="<h4>2017:08:12 </h4><p>Lubię drabiny... Mam to po łojcu</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/026.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/027.JPG 375, thumbs/027.JPG 480, thumbs/027.JPG 800" data-src="img/027.JPG" data-sub-html="<h4>2017:08:15 </h4><p>Obsługa aqua parku</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/027.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/028.JPG 375, thumbs/028.JPG 480, thumbs/028.JPG 800" data-src="img/028.JPG" data-sub-html="<h4>2017:08:15 </h4><p>On jeszcze nie umie jeździć</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/028.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/029.JPG 375, thumbs/029.JPG 480, thumbs/029.JPG 800" data-src="img/029.JPG" data-sub-html="<h4>2017:08:15 </h4><p>Muszę go popchać</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/029.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/030.JPG 375, thumbs/030.JPG 480, thumbs/030.JPG 800" data-src="img/030.JPG" data-sub-html="<h4>2017:08:15 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/030.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/031.JPG 375, thumbs/031.JPG 480, thumbs/031.JPG 800" data-src="img/031.JPG" data-sub-html="<h4>2017:08:15 </h4><p>Amant się napatoczył</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/031.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/032.JPG 375, thumbs/032.JPG 480, thumbs/032.JPG 800" data-src="img/032.JPG" data-sub-html="<h4>2017:08:17 </h4><p>Wypuście mnie!</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/032.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/033.JPG 375, thumbs/033.JPG 480, thumbs/033.JPG 800" data-src="img/033.JPG" data-sub-html="<h4>2017:08:18 </h4><p>Chyba się posikam ze śmiechu</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/033.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/034.JPG 375, thumbs/034.JPG 480, thumbs/034.JPG 800" data-src="img/034.JPG" data-sub-html="<h4>2017:08:18 </h4><p>Na szczęście mam pojemne majty</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/034.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/035.JPG 375, thumbs/035.JPG 480, thumbs/035.JPG 800" data-src="img/035.JPG" data-sub-html="<h4>2017:08:18 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/035.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/036.JPG 375, thumbs/036.JPG 480, thumbs/036.JPG 800" data-src="img/036.JPG" data-sub-html="<h4>2017:08:19 </h4><p>No to sprzątamy</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/036.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/037.JPG 375, thumbs/037.JPG 480, thumbs/037.JPG 800" data-src="img/037.JPG" data-sub-html="<h4>2017:08:21 </h4><p>Może mnie tu nie znajdą</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/037.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/038.JPG 375, thumbs/038.JPG 480, thumbs/038.JPG 800" data-src="img/038.JPG" data-sub-html="<h4>2017:08:31 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/038.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/039.JPG 375, thumbs/039.JPG 480, thumbs/039.JPG 800" data-src="img/039.JPG" data-sub-html="<h4>2017:08:31 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/039.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/040.JPG 375, thumbs/040.JPG 480, thumbs/040.JPG 800" data-src="img/040.JPG" data-sub-html="<h4>2017:08:31 </h4><p>Ale wieje</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/040.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/041.JPG 375, thumbs/041.JPG 480, thumbs/041.JPG 800" data-src="img/041.JPG" data-sub-html="<h4>2017:08:31 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/041.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/042.JPG 375, thumbs/042.JPG 480, thumbs/042.JPG 800" data-src="img/042.JPG" data-sub-html="<h4>2017:08:31 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/042.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/043.JPG 375, thumbs/043.JPG 480, thumbs/043.JPG 800" data-src="img/043.JPG" data-sub-html="<h4>2017:08:31 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/043.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/044.JPG 375, thumbs/044.JPG 480, thumbs/044.JPG 800" data-src="img/044.JPG" data-sub-html="<h4>2017:08:31 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/044.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/045.JPG 375, thumbs/045.JPG 480, thumbs/045.JPG 800" data-src="img/045.JPG" data-sub-html="<h4>2017:08:31 </h4><p></p>">
+				<a href=""> <img class="img-responsive" src="thumbs/045.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/046.JPG 375, thumbs/046.JPG 480, thumbs/046.JPG 800" data-src="img/046.JPG" data-sub-html="<h4>2017:08:31 </h4><p>Morświn</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/046.JPG"> </a>
+				</li>
+				<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbs/047.JPG 375, thumbs/047.JPG 480, thumbs/047.JPG 800" data-src="img/047.JPG" data-sub-html="<h4>2017:08:31 </h4><p>Jeszcze bym się powspinała, a drabina już się kończy</p>">
+				<a href=""> <img class="img-responsive" src="thumbs/047.JPG"> </a>
+				</li>
+
+
+			
+			</ul>
+        </div>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('#lightgallery').lightGallery();
+        });
+        </script>
+        <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+        <script src="../dist/js/lightgallery-all.min.js"></script>
+        <script src="../lib/jquery.mousewheel.min.js"></script>
+    </body>
+</html>
